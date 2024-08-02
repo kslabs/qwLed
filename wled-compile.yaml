@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32c3dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_DEBUG_HOST='\''"qwLed-AP02"'\'' -D LEDPIN=3 -D BTNPIN=0 -D WLED_MAX_BUSSES=3 -D DEFAULT_LED_COUNT=64 -D ABL_MILLIAMPS_DEFAULT=1000 -D USERMOD_AUTO_SAVE' >>platformio.ini
+        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_DEBUG_HOST='\''"qwLed-AP02"'\'' -D LEDPIN=3 -D BTNPIN=0 -D WLED_MAX_BUSSES=2 -D DEFAULT_LED_COUNT=64 -D ABL_MILLIAMPS_DEFAULT=1000 -D USERMOD_AUTO_SAVE' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
         pio run -e custom_build || pio run -e custom_build
